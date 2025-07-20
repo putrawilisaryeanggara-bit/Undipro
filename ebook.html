@@ -1,20 +1,3 @@
-import Image from "next/image";
-
-const Ebooks = () => { const ebooks = [ { title: "Rahasia Sukses Finansial di Usia Muda", description: "Pelajari langkah-langkah sederhana untuk mencapai kebebasan finansial sejak dini.", image: "/images/ebook1.jpg", }, { title: "10 Cara Mudah Memulai Usaha Sendiri", description: "Panduan praktis memulai bisnis dari nol tanpa perlu modal besar.", image: "/images/ebook2.jpg", }, { title: "Hidup Sehat Tanpa Ribet", description: "Tips sederhana menjaga pola hidup sehat meskipun punya jadwal padat.", image: "/images/ebook3.jpg", }, { title: "Mengelola Waktu untuk Hidup Lebih Produktif", description: "Strategi manajemen waktu agar kamu bisa lebih fokus dan efisien.", image: "/images/ebook4.jpg", }, { title: "Menjadi Konten Kreator dari Rumah", description: "Langkah-langkah membangun personal brand dan jadi kreator digital.", image: "/images/ebook5.jpg", }, { title: "5 Kebiasaan Orang Sukses yang Wajib Ditiru", description: "Temukan rutinitas harian yang membuat banyak tokoh dunia jadi sukses.", image: "/images/ebook6.jpg", }, { title: "Strategi Menabung di Era Digital", description: "Cara modern menyisihkan uang dan mengatur pengeluaran lewat aplikasi.", image: "/images/ebook7.jpg", }, { title: "Bangun Mental Kuat untuk Hadapi Tantangan", description: "Panduan membentuk mindset positif dan mental baja dalam hidup.", image: "/images/ebook8.jpg", }, { title: "Tips Cerdas Belanja Online", description: "Cara aman dan hemat saat berbelanja online di e-commerce.", image: "/images/ebook9.jpg", }, { title: "Menulis Buku Pertamamu Tanpa Bingung", description: "Teknik menulis buku dengan alur yang rapi dan mudah dipahami.", image: "/images/ebook10.jpg", }, ];
-
-return ( <div className="min-h-screen bg-black text-white py-10 px-4"> <h1 className="text-4xl font-bold text-center text-yellow-400 mb-10">Daftar E-Book</h1> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {ebooks.map((ebook, index) => ( <div
-key={index}
-className="bg-zinc-900 rounded-2xl shadow-lg p-4 hover:shadow-yellow-500/50 transition-all"
-> <Image
-src={ebook.image}
-alt={ebook.title}
-width={500}
-height={300}
-className="rounded-xl mb-4"
-/> <h2 className="text-xl font-semibold text-yellow-300 mb-2">{ebook.title}</h2> <p className="text-zinc-300 mb-4">{ebook.description}</p> <button className="bg-yellow-500 text-black font-bold py-2 px-4 rounded-xl hover:bg-yellow-600"> Beli Sekarang - Rp49.000 </button> </div> ))} </div> </div> ); };
-
-export default Ebooks;
-
 
 <!DOCTYPE html>
 <html lang="id">
