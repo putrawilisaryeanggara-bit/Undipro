@@ -1,1 +1,6 @@
 public/images/.gitkeep
+<div className="ebook-card">
+  <img src="/images/ebook1.jpg" alt="Ebook 1" className="w-full rounded-xl" />
+  <h3 className="text-lg font-bold text-white mt-2">Judul Ebook 1</h3>
+  <p className="text-gray-300">Deskripsi singkat ebook 1...</p>
+</div>
