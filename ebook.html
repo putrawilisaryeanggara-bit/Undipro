@@ -1,66 +1,104 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar E-Book - UndiPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      color: gold;
+    }
+    .ebook-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .ebook-card {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+    .ebook-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .ebook-content {
+      padding: 15px;
+    }
+    .ebook-content h3 {
+      color: gold;
+      margin: 0 0 10px;
+    }
+    .ebook-content p {
+      margin: 5px 0;
+    }
+    .price {
+      font-weight: bold;
+      color: #00ff99;
+    }
+    .bonus {
+      color: #ffcc00;
+    }
+    .buy-btn {
+      display: block;
+      text-align: center;
+      background-color: gold;
+      color: #000;
+      padding: 10px;
+      margin: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daftar E-Book UndiPro</h1>
+    <p>Beli E-Book & Dapatkan Kupon Undian Berhadiah!</p>
+  </header>
 
-export default function EbookPage() { const ebooks = [ { title: 'Rahasia Sukses Usaha Kecil', description: 'Pelajari langkah-langkah praktis memulai dan mengembangkan usaha kecil dari nol. Cocok untuk pemula!', price: 'Rp49.000', bonus: '2 Kupon Undian', image: '/images/ebook1.jpg', }, { title: 'Cara Cepat Mengatur Keuangan Pribadi', description: 'Panduan mudah mengelola pemasukan dan pengeluaran agar hidup lebih tenang dan terencana.', price: 'Rp49.000', bonus: '2 Kupon Undian', image: '/images/ebook2.jpg', }, // Tambahkan e-book lainnya di sini ];
+  <section class="ebook-list">
 
-return ( <div className="min-h-screen bg-black text-white px-4 py-8"> <h1 className="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8"> Daftar E-Book <br className="block md:hidden" /> UndiPro </h1>
-
-<div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-    {ebooks.map((ebook, index) => (
-      <div
-        key={index}
-        className="border-2 border-yellow-500 rounded-2xl p-5 bg-gray-900 shadow-lg hover:shadow-yellow-500/30 transition duration-300"
-      >
-        <img
-          src={ebook.image}
-          alt={ebook.title}
-          className="rounded-xl mb-4 w-full h-48 object-cover border border-yellow-500"
-        />
-        <h2 className="text-xl font-bold text-yellow-400 mb-2">
-          {ebook.title}
-        </h2>
-        <p className="text-gray-200 mb-4">{ebook.description}</p>
-        <p className="text-white font-bold text-lg">{ebook.price}</p>
-        <p className="text-gray-400 text-sm mb-4">Bonus: {ebook.bonus}</p>
-        <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-xl hover:bg-yellow-300 transition">
-          Beli Sekarang
-        </button>
+    <div class="ebook-card">
+      <img src="/images/ebook1.jpg" alt="Ebook 1" />
+      <div class="ebook-content">
+        <h3>Rahasia Sukses Usaha Kecil</h3>
+        <p>Pelajari langkah-langkah praktis memulai dan mengembangkan usaha kecil dari nol. Cocok untuk pemula!</p>
+        <p class="price">Rp49.000</p>
+        <p class="bonus">Bonus: 2 Kupon Undian</p>
+        <a href="#" class="buy-btn">Beli Sekarang</a>
       </div>
-    ))}
-  </div>
-</div>
+    </div>
 
-); }
-
- React from 'react';
-
-export default function EbookPage() { const ebooks = [ { title: 'Rahasia Sukses Usaha Kecil', description: 'Pelajari langkah-langkah praktis memulai dan mengembangkan usaha kecil dari nol. Cocok untuk pemula!', price: 'Rp49.000', bonus: '2 Kupon Undian', image: '/images/ebook1.jpg', }, { title: 'Cara Cepat Mengatur Keuangan Pribadi', description: 'Panduan mudah mengelola pemasukan dan pengeluaran agar hidup lebih tenang dan terencana.', price: 'Rp49.000', bonus: '2 Kupon Undian', image: '/images/ebook2.jpg', }, // Tambahkan e-book lainnya di sini ];
-
-return ( <div className="min-h-screen bg-black text-white px-4 py-8"> <h1 className="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8"> Daftar E-Book <br className="block md:hidden" /> UndiPro </h1>
-
-<div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-    {ebooks.map((ebook, index) => (
-      <div
-        key={index}
-        className="border-2 border-yellow-500 rounded-2xl p-5 bg-gray-900 shadow-lg hover:shadow-yellow-500/30 transition duration-300"
-      >
-        <img
-          src={ebook.image}
-          alt={ebook.title}
-          className="rounded-xl mb-4 w-full h-48 object-cover border border-yellow-500"
-        />
-        <h2 className="text-xl font-bold text-yellow-400 mb-2">
-          {ebook.title}
-        </h2>
-        <p className="text-gray-200 mb-4">{ebook.description}</p>
-        <p className="text-white font-bold text-lg">{ebook.price}</p>
-        <p className="text-gray-400 text-sm mb-4">Bonus: {ebook.bonus}</p>
-        <button className="bg-yellow-400 text-black font-bold py-2 px-4 rounded-xl hover:bg-yellow-300 transition">
-          Beli Sekarang
-        </button>
+    <div class="ebook-card">
+      <img src="/images/ebook2.jpg" alt="Ebook 2" />
+      <div class="ebook-content">
+        <h3>Cara Cepat Mengatur Keuangan Pribadi</h3>
+        <p>Panduan mudah mengelola pemasukan dan pengeluaran agar hidup lebih tenang dan terencana.</p>
+        <p class="price">Rp49.000</p>
+        <p class="bonus">Bonus: 2 Kupon Undian</p>
+        <a href="#" class="buy-btn">Beli Sekarang</a>
       </div>
-    ))}
-  </div>
-</div>
+    </div>
 
-); }
+    <!-- Tambahkan e-book lainnya di sini -->
 
+  </section>
+</body>
+</html>
