@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const ebooks = [
   {
     id: 1,
