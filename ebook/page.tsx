@@ -1,94 +1,101 @@
+'use client'
+
+import Image from 'next/image'
+import Link from 'next/link'
+
 const ebooks = [
   {
     id: 1,
-    title: "Panduan Hidup Sehat",
-    description: "Tips dan strategi menjaga kesehatan jasmani dan mental.",
-    image: "/images/ebook1.jpg",
+    title: 'Rahasia Sukses Bisnis Online',
+    description: 'Panduan memulai dan mengembangkan bisnis online dari nol.',
+    image: '/gambar/ebook1.jpg',
   },
   {
     id: 2,
-    title: "Rahasia Bisnis Sukses",
-    description: "Strategi membangun bisnis dari nol hingga sukses.",
-    image: "/images/ebook2.jpg",
+    title: 'Tips Hidup Hemat',
+    description: 'Strategi praktis mengatur keuangan harian dan bulanan.',
+    image: '/gambar/ebook2.jpg',
   },
   {
     id: 3,
-    title: "Cara Mengatur Keuangan Pribadi",
-    description: "Teknik budgeting dan mengelola keuangan harian.",
-    image: "/images/ebook3.jpg",
+    title: 'Cara Mudah Menjadi Freelancer',
+    description: 'Langkah-langkah menjadi freelancer dan mendapatkan klien luar negeri.',
+    image: '/gambar/ebook3.jpg',
   },
   {
     id: 4,
-    title: "Mengasah Kreativitas",
-    description: "Latihan dan metode untuk meningkatkan kreativitas.",
-    image: "/images/ebook4.jpg",
+    title: 'Jago Public Speaking',
+    description: 'Teknik berbicara percaya diri di depan umum.',
+    image: '/gambar/ebook4.jpg',
   },
   {
     id: 5,
-    title: "Menjadi Produktif Setiap Hari",
-    description: "Cara mengatur waktu dan menghindari prokrastinasi.",
-    image: "/images/ebook5.jpg",
+    title: 'Rahasia Diet Sehat',
+    description: 'Tips menurunkan berat badan tanpa menyiksa diri.',
+    image: '/gambar/ebook5.jpg',
   },
   {
     id: 6,
-    title: "Belajar Investasi untuk Pemula",
-    description: "Panduan mudah memulai investasi aman dan menguntungkan.",
-    image: "/images/ebook6.jpg",
+    title: 'Belajar Investasi untuk Pemula',
+    description: 'Dasar-dasar investasi saham, reksa dana, dan lainnya.',
+    image: '/gambar/ebook6.jpg',
   },
   {
     id: 7,
-    title: "Parenting di Era Digital",
-    description: "Tips mendidik anak di tengah perkembangan teknologi.",
-    image: "/images/ebook7.jpg",
+    title: 'Mengatur Waktu Efektif',
+    description: 'Cara mengatur jadwal harian untuk hidup lebih produktif.',
+    image: '/gambar/ebook7.jpg',
   },
   {
     id: 8,
-    title: "Mengelola Stres dan Emosi",
-    description: "Teknik relaksasi dan manajemen stres yang efektif.",
-    image: "/images/ebook8.jpg",
+    title: 'Langkah Awal Jadi Content Creator',
+    description: 'Tips bikin konten YouTube, TikTok, dan Instagram.',
+    image: '/gambar/ebook8.jpg',
   },
   {
     id: 9,
-    title: "Dasar-dasar Desain Interior",
-    description: "Panduan dekorasi rumah sederhana dan elegan.",
-    image: "/images/ebook9.jpg",
+    title: 'Membangun Mindset Positif',
+    description: 'Cara berpikir positif menghadapi tantangan hidup.',
+    image: '/gambar/ebook9.jpg',
   },
   {
     id: 10,
-    title: "Menulis Konten Menarik",
-    description: "Rahasia membuat tulisan yang menjual dan memikat.",
-    image: "/images/ebook10.jpg",
+    title: 'Seni Mendidik Anak dengan Cinta',
+    description: 'Panduan membentuk karakter anak sejak dini.',
+    image: '/gambar/ebook10.jpg',
   },
-];
+]
 
 export default function EbookPage() {
   return (
-    <main className="min-h-screen bg-black text-white py-10 px-4">
-      <h1 className="text-4xl font-bold text-center text-yellow-400 mb-12">Daftar E-Book</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <div className="p-6 max-w-6xl mx-auto">
+      <h1 className="text-3xl font-bold text-center mb-8 text-yellow-500">Daftar E-Book</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ebooks.map((ebook) => (
-          <div
-            key={ebook.id}
-            className="bg-zinc-900 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300"
-          >
+          <div key={ebook.id} className="bg-white rounded-2xl shadow-md overflow-hidden">
             <Image
               src={ebook.image}
               alt={ebook.title}
               width={500}
               height={300}
-              className="w-full h-48 object-cover"
+              className="w-full h-64 object-cover"
             />
-            <div className="p-5">
-              <h2 className="text-xl font-semibold text-yellow-300 mb-2">{ebook.title}</h2>
-              <p className="text-sm text-gray-300 mb-4">{ebook.description}</p>
-              <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded-lg">
-                Beli Sekarang - Rp49.000
-              </button>
-              <p className="text-xs text-gray-400 mt-2 text-center">Bonus 2 kupon undian</p>
+            <div className="p-4">
+              <h2 className="text-xl font-semibold text-gray-800">{ebook.title}</h2>
+              <p className="text-gray-600 mb-4">{ebook.description}</p>
+              <Link
+                href={`https://tripay.co.id/checkout/pilih_pembayaran?amount=49000&name=${encodeURIComponent(
+                  ebook.title
+                )}&merchant_ref=ebook${ebook.id}`}
+                target="_blank"
+                className="inline-block bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-xl text-center"
+              >
+                Beli Sekarang – Rp49.000
+              </Link>
             </div>
           </div>
         ))}
       </div>
-    </main>
-  );
+    </div>
+  )
 }
