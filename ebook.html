@@ -1,117 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Halaman E-Book - UndiPro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar E-Book | UndiPro</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: gold;
+      margin-bottom: 40px;
+    }
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .ebook-card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      text-align: center;
+      padding: 15px;
+    }
+    .ebook-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .ebook-card h3 {
+      margin: 15px 0 5px;
+      color: #ffd700;
+    }
+    .ebook-card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+    .ebook-card .price {
+      margin: 10px 0;
+      font-weight: bold;
+      color: #fff;
+    }
+    .ebook-card button {
+      background-color: #ffd700;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .ebook-card button:hover {
+      background-color: #e5c100;
+    }
+  </style>
 </head>
 <body>
-  <section class="ebook-section">
-    <h2 class="section-title">📚 Daftar E-Book</h2>
+  <div class="container">
+    <h1>Daftar E-Book UndiPro</h1>
     <div class="ebook-grid">
 
+      <!-- EBOOK 1 -->
       <div class="ebook-card">
-        <img src="images/ebook1.jpg" alt="E-Book 1" />
-        <h3>E-Book 1 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 1 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook1.jpg" alt="Ebook 1" />
+        <h3>Rahasia Sukses Finansial</h3>
+        <p>Strategi sederhana membangun masa depan keuangan yang lebih baik.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 2 -->
       <div class="ebook-card">
-        <img src="images/ebook2.jpg" alt="E-Book 2" />
-        <h3>E-Book 2 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 2 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook2.jpg" alt="Ebook 2" />
+        <h3>Bisnis Online dari Nol</h3>
+        <p>Panduan praktis memulai bisnis online meski tanpa modal besar.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 3 -->
       <div class="ebook-card">
-        <img src="images/ebook3.jpg" alt="E-Book 3" />
-        <h3>E-Book 3 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 3 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook3.jpg" alt="Ebook 3" />
+        <h3>Produktif Tanpa Stress</h3>
+        <p>Tips mengatur waktu dan tenaga untuk hidup lebih seimbang.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 4 -->
       <div class="ebook-card">
-        <img src="images/ebook4.jpg" alt="E-Book 4" />
-        <h3>E-Book 4 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 4 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook4.jpg" alt="Ebook 4" />
+        <h3>Marketing Instagram Pemula</h3>
+        <p>Cara cepat membangun bisnis lewat Instagram.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 5 -->
       <div class="ebook-card">
-        <img src="images/ebook5.jpg" alt="E-Book 5" />
-        <h3>E-Book 5 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 5 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook5.jpg" alt="Ebook 5" />
+        <h3>Membaca Peluang Usaha</h3>
+        <p>Jangan lewatkan peluang di sekitarmu. Ini cara melihatnya!</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 6 -->
       <div class="ebook-card">
-        <img src="images/ebook6.jpg" alt="E-Book 6" />
-        <h3>E-Book 6 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 6 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook6.jpg" alt="Ebook 6" />
+        <h3>Motivasi Pagi Hari</h3>
+        <p>Kumpulan inspirasi singkat yang membangkitkan semangatmu.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 7 -->
       <div class="ebook-card">
-        <img src="images/ebook7.jpg" alt="E-Book 7" />
-        <h3>E-Book 7 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 7 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook7.jpg" alt="Ebook 7" />
+        <h3>Tips Karier Profesional</h3>
+        <p>Langkah-langkah cerdas meniti karier di era digital.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 8 -->
       <div class="ebook-card">
-        <img src="images/ebook8.jpg" alt="E-Book 8" />
-        <h3>E-Book 8 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 8 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook8.jpg" alt="Ebook 8" />
+        <h3>Rahasia Jualan Laris</h3>
+        <p>Cara sederhana tapi ampuh agar produkmu cepat laku.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 9 -->
       <div class="ebook-card">
-        <img src="images/ebook9.jpg" alt="E-Book 9" />
-        <h3>E-Book 9 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 9 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook9.jpg" alt="Ebook 9" />
+        <h3>Kunci Menjadi Disiplin</h3>
+        <p>Latihan disiplin harian untuk hidup yang lebih terarah.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
-
+      <!-- EBOOK 10 -->
       <div class="ebook-card">
-        <img src="images/ebook10.jpg" alt="E-Book 10" />
-        <h3>E-Book 10 - Judul Menarik</h3>
-        <p>Deskripsi singkat mengenai e-book nomor 10 untuk menarik pembaca dan calon pembeli.</p>
-        <div class="price">Rp49.000</div>
-        <div class="bonus">🎁 Bonus 2 Kupon Undian</div>
-        <a href="#" class="btn-beli">Beli Sekarang</a>
+        <img src="images/ebook10.jpg" alt="Ebook 10" />
+        <h3>Belajar Desain Canva</h3>
+        <p>Tutorial desain untuk pemula agar lebih kreatif dan percaya diri.</p>
+        <div class="price">Rp49.000 + 2 Kupon Undian</div>
+        <button>Beli Sekarang</button>
       </div>
 
     </div>
-  </section>
+  </div>
 </body>
 </html>
