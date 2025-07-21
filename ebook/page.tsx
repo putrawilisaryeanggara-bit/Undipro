@@ -14,7 +14,11 @@ const ebooks = [
     id: 2,
     title: 'Tips Hidup Hemat',
     description: 'Strategi praktis mengatur keuangan harian dan bulanan.',
-    image: '/gambar/ebook2.jpg',
+    image:
+  src={`/images/ebook1.jpg`}
+  alt="Ebook 1"
+  className="w-full h-64 object-cover rounded-xl"
+/>',
   },
   {
     id: 3,
