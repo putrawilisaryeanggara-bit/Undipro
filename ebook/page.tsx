@@ -8,7 +8,11 @@ const ebooks = [
     id: 1,
     title: 'Rahasia Sukses Bisnis Online',
     description: 'Panduan memulai dan mengembangkan bisnis online dari nol.',
-    image: '/gambar/ebook1.jpg',
+    image:
+  src={`/images/ebook1.jpg`}
+  alt="Ebook 1"
+  className="w-full h-64 object-cover rounded-xl"
+/>,
   },
   {
     id: 2,
