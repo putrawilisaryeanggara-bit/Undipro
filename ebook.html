@@ -11,20 +11,8 @@
   <section class="ebook-section">
     <h2 class="section-title">📚 Daftar E-Book</h2>
     <div class="ebook-grid">
-
-import Image from 'next/image';
-
-const ebooks = [ { id: 1, title: 'Cara Sukses Usaha Kecil', description: 'Panduan praktis memulai dan mengembangkan usaha kecil.', image: '/images/ebook1.jpg', price: 'Rp49.000', }, { id: 2, title: 'Rahasia Bisnis Online', description: 'Langkah-langkah mudah membangun bisnis online dari nol.', image: '/images/ebook2.jpg', price: 'Rp49.000', }, { id: 3, title: 'Investasi Cerdas untuk Pemula', description: 'Dasar-dasar investasi yang wajib diketahui pemula.', image: '/images/ebook3.jpg', price: 'Rp49.000', }, { id: 4, title: 'Tips Hemat Keuangan Keluarga', description: 'Strategi mengelola keuangan rumah tangga agar lebih hemat.', image: '/images/ebook4.jpg', price: 'Rp49.000', }, { id: 5, title: 'Meningkatkan Produktivitas Kerja', description: 'Cara meningkatkan fokus dan efisiensi saat bekerja.', image: '/images/ebook5.jpg', price: 'Rp49.000', }, { id: 6, title: 'Membangun Pola Hidup Sehat', description: 'Panduan hidup sehat secara fisik dan mental.', image: '/images/ebook6.jpg', price: 'Rp49.000', }, { id: 7, title: 'Strategi Pemasaran UMKM', description: 'Cara memasarkan produk UMKM dengan efektif.', image: '/images/ebook7.jpg', price: 'Rp49.000', }, { id: 8, title: 'Panduan Freelance Sukses', description: 'Langkah awal membangun karir sebagai freelancer.', image: '/images/ebook8.jpg', price: 'Rp49.000', }, { id: 9, title: 'Motivasi Diri untuk Pemula', description: 'Cara membangun semangat dan mindset positif.', image: '/images/ebook9.jpg', price: 'Rp49.000', }, { id: 10, title: 'Belajar Public Speaking', description: 'Kuasai kemampuan berbicara di depan umum.', image: '/images/ebook10.jpg', price: 'Rp49.000', }, ];
-
-export default function EbookPage() { return ( <div className="min-h-screen bg-black text-white py-12 px-4 sm:px-6 lg:px-8"> <h1 className="text-4xl font-bold text-center text-yellow-400 mb-12">Daftar E-Book</h1> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"> {ebooks.map((ebook) => ( <div key={ebook.id} className="bg-white text-black rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition duration-300"> <Image
-src={ebook.image}
-alt={ebook.title}
-width={500}
-height={300}
-className="w-full h-48 object-cover"
-/> <div className="p-4"> <h2 className="text-xl font-semibold text-yellow-700 mb-2">{ebook.title}</h2> <p className="text-sm text-gray-700 mb-4">{ebook.description}</p> <div className="flex items-center justify-between"> <span className="text-lg font-bold text-black">{ebook.price}</span> <button className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-lg transition duration-300"> Beli Sekarang </button> </div> <p className="mt-2 text-xs text-green-600">Bonus 2 Kupon Undian</p> </div> </div> ))} </div> </div> ); }
-
-- 10 E-Book -->
+      
+      <-- 10 E-Book -->
 
       <div class="ebook-card">
         <img src="images/ebook1.jpg" alt="E-Book 1" />
