@@ -1,0 +1,46 @@
+export default function GoldGivePage() {
+  return (
+    <main className="min-h-screen bg-black text-white py-10 px-4 md:px-20">
+      <div className="max-w-5xl mx-auto text-center space-y-8">
+        <h1 className="text-4xl md:text-5xl font-bold text-yellow-400">GOLD GIVE 2025</h1>
+        <p className="text-lg md:text-xl text-gray-300">
+          Raih kesempatan memenangkan hadiah utama berupa <span className="text-yellow-400 font-semibold">1 Unit Honda Beat 2025</span>!
+        </p>
+
+        <img
+          src="/images/honda-beat.png"
+          alt="Hadiah Honda Beat 2025"
+          className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+        />
+
+        <div className="bg-gray-900 border border-yellow-500 rounded-xl p-6 space-y-4">
+          <h2 className="text-2xl font-semibold text-yellow-300">Syarat Utama:</h2>
+          <ul className="list-disc list-inside text-left text-gray-200">
+            <li>Menjadi <strong>member aktif</strong> UndiPro</li>
+            <li>Berhasil mengumpulkan <strong>99 kode referral</strong></li>
+            <li>Referral terbanyak hingga <strong>31 Desember 2025</strong></li>
+          </ul>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-4 justify-center pt-6">
+          <a
+            href="/referral"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition"
+          >
+            Lihat Referral Saya
+          </a>
+          <a
+            href="/ebook"
+            className="bg-white hover:bg-gray-200 text-black font-bold py-3 px-6 rounded-lg transition"
+          >
+            Beli E-Book & Ikut Undian
+          </a>
+        </div>
+
+        <p className="text-sm text-gray-400 pt-8">
+          Pemenang diumumkan di halaman pengumuman resmi UndiPro. Pastikan email dan akun aktif!
+        </p>
+      </div>
+    </main>
+  );
+}
