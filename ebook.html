@@ -1,176 +1,161 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daftar E-Book | UndiPro</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      padding: 30px;
-    }
-    h1 {
-      text-align: center;
-      color: gold;
-      margin-bottom: 40px;
-    }
-    .ebook-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .ebook-card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-      text-align: center;
-      padding: 15px;
-    }
-    .ebook-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .ebook-card h3 {
-      margin: 15px 0 5px;
-      color: #ffd700;
-    }
-    .ebook-card p {
-      font-size: 14px;
-      color: #ccc;
-    }
-    .ebook-card .price {
-      margin: 10px 0;
-      font-weight: bold;
-      color: #fff;
-    }
-    .ebook-card button {
-      background-color: #ffd700;
-      color: #000;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .ebook-card button:hover {
-      background-color: #e5c100;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>Daftar E-Book UndiPro</h1>
-    <div class="ebook-grid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar E-Book UndiPro</title>
+    <style>
+      body {
+        background-color: #0f0f0f;
+        color: #fefefe;
+        font-family: sans-serif;
+        padding: 20px;
+      }
 
-      <!-- EBOOK 1 -->
-      <div class="ebook-card">
-        <img src="images/ebook1.jpg" alt="Ebook 1" />
-        <h3>Rahasia Sukses Finansial</h3>
-        <p>Strategi sederhana membangun masa depan keuangan yang lebih baik.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-        <a
-  href="/pembayaran-1.html"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="bg-yellow-500 text-white px-4 py-2 rounded">
-    Beli Sekarang
-  </button>
-</a>
-      </div>
+      h1 {
+        color: #facc15;
+        text-align: center;
+      }
 
-      <!-- EBOOK 2 -->
-      <div class="ebook-card">
-        <img src="images/ebook2.jpg" alt="Ebook 2" />
-        <h3>Bisnis Online dari Nol</h3>
-        <p>Panduan praktis memulai bisnis online meski tanpa modal besar.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .ebook {
+        background-color: #1a1a1a;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 500px;
+        box-shadow: 0 0 10px #facc15;
+      }
 
-      <!-- EBOOK 3 -->
-      <div class="ebook-card">
-        <img src="images/ebook3.jpg" alt="Ebook 3" />
-        <h3>Produktif Tanpa Stress</h3>
-        <p>Tips mengatur waktu dan tenaga untuk hidup lebih seimbang.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .ebook img {
+        width: 100%;
+        border-radius: 10px;
+      }
 
-      <!-- EBOOK 4 -->
-      <div class="ebook-card">
-        <img src="images/ebook4.jpg" alt="Ebook 4" />
-        <h3>Marketing Instagram Pemula</h3>
-        <p>Cara cepat membangun bisnis lewat Instagram.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .judul {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #facc15;
+      }
 
-      <!-- EBOOK 5 -->
-      <div class="ebook-card">
-        <img src="images/ebook5.jpg" alt="Ebook 5" />
-        <h3>Membaca Peluang Usaha</h3>
-        <p>Jangan lewatkan peluang di sekitarmu. Ini cara melihatnya!</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .deskripsi {
+        margin: 10px 0;
+        font-size: 0.95rem;
+        color: #e5e5e5;
+      }
 
-      <!-- EBOOK 6 -->
-      <div class="ebook-card">
-        <img src="images/ebook6.jpg" alt="Ebook 6" />
-        <h3>Motivasi Pagi Hari</h3>
-        <p>Kumpulan inspirasi singkat yang membangkitkan semangatmu.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .harga {
+        font-weight: bold;
+        color: #fff;
+      }
 
-      <!-- EBOOK 7 -->
-      <div class="ebook-card">
-        <img src="images/ebook7.jpg" alt="Ebook 7" />
-        <h3>Tips Karier Profesional</h3>
-        <p>Langkah-langkah cerdas meniti karier di era digital.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .btn-beli {
+        display: inline-block;
+        background-color: #facc15;
+        color: #000;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-      <!-- EBOOK 8 -->
-      <div class="ebook-card">
-        <img src="images/ebook8.jpg" alt="Ebook 8" />
-        <h3>Rahasia Jualan Laris</h3>
-        <p>Cara sederhana tapi ampuh agar produkmu cepat laku.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
+      .btn-beli:hover {
+        background-color: #eab308;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daftar E-Book<br />UndiPro</h1>
 
-      <!-- EBOOK 9 -->
-      <div class="ebook-card">
-        <img src="images/ebook9.jpg" alt="Ebook 9" />
-        <h3>Kunci Menjadi Disiplin</h3>
-        <p>Latihan disiplin harian untuk hidup yang lebih terarah.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
-
-      <!-- EBOOK 10 -->
-      <div class="ebook-card">
-        <img src="images/ebook10.jpg" alt="Ebook 10" />
-        <h3>Belajar Desain Canva</h3>
-        <p>Tutorial desain untuk pemula agar lebih kreatif dan percaya diri.</p>
-        <div class="price">Rp49.000 + 2 Kupon Undian</div>
-        <button>Beli Sekarang</button>
-      </div>
-
+    <!-- E-Book 1 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook1.jpg" alt="Rahasia Sukses Finansial" />
+      <div class="judul">Rahasia Sukses Finansial</div>
+      <div class="deskripsi">Strategi sederhana membangun masa depan keuangan yang lebih baik.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
     </div>
-  </div>
-</body>
+
+    <!-- E-Book 2 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook2.jpg" alt="Bisnis Online dari Nol" />
+      <div class="judul">Bisnis Online dari Nol</div>
+      <div class="deskripsi">Panduan memulai bisnis online dari awal tanpa modal besar.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 3 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook3.jpg" alt="Produktif Tanpa Stress" />
+      <div class="judul">Produktif Tanpa Stress</div>
+      <div class="deskripsi">Cara menjaga keseimbangan antara kerja dan kebahagiaan pribadi.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 4 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook4.jpg" alt="Marketing Instagram Pemula" />
+      <div class="judul">Marketing Instagram Pemula</div>
+      <div class="deskripsi">Optimalkan Instagram Anda untuk menjual produk secara efektif.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 5 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook5.jpg" alt="Membaca Peluang Usaha" />
+      <div class="judul">Membaca Peluang Usaha</div>
+      <div class="deskripsi">Panduan praktis melihat potensi bisnis di sekitar Anda.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 6 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook6.jpg" alt="Motivasi Pagi Hari" />
+      <div class="judul">Motivasi Pagi Hari</div>
+      <div class="deskripsi">Bangkitkan semangat harian Anda dengan inspirasi dan refleksi pagi.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 7 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook7.jpg" alt="Tips Karier Profesional" />
+      <div class="judul">Tips Karier Profesional</div>
+      <div class="deskripsi">Langkah-langkah membangun reputasi dan kemajuan karier.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 8 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook8.jpg" alt="Rahasia Jualan Laris" />
+      <div class="judul">Rahasia Jualan Laris</div>
+      <div class="deskripsi">Teknik psikologis dan strategi ampuh meningkatkan penjualan.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 9 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook9.jpg" alt="Kunci Menjadi Disiplin" />
+      <div class="judul">Kunci Menjadi Disiplin</div>
+      <div class="deskripsi">Bangun disiplin diri untuk meraih tujuan jangka panjang Anda.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+
+    <!-- E-Book 10 -->
+    <div class="ebook">
+      <img src="https://undipro.com/assets/ebook10.jpg" alt="Belajar Desain Canva" />
+      <div class="judul">Belajar Desain Canva</div>
+      <div class="deskripsi">Pelajari cara membuat desain menarik untuk promosi atau sosial media.</div>
+      <div class="harga">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran/ebook-dummy" target="_blank" class="btn-beli">Beli Sekarang</a>
+    </div>
+  </body>
 </html>
