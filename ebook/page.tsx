@@ -1,95 +1,101 @@
-import Image from "next/image";
+'use client'
+
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 
 const ebooks = [
   {
     id: 1,
-    title: "Rahasia Sukses Finansial",
-    description: "Strategi sederhana membangun masa depan keuangan yang lebih baik.",
-    image: "/ebook/1.jpg",
+    title: 'Rahasia Sukses Finansial',
+    description: 'Pelajari cara mengelola keuangan dan membangun kebebasan finansial.',
+    image: '/ebooks/1.jpg',
   },
   {
     id: 2,
-    title: "Bisnis Online dari Nol",
-    description: "Panduan praktis memulai bisnis online meski tanpa modal besar.",
-    image: "/ebook/2.jpg",
+    title: 'Bisnis Online dari Nol',
+    description: 'Panduan lengkap memulai bisnis online tanpa modal besar.',
+    image: '/ebooks/2.jpg',
   },
   {
     id: 3,
-    title: "Manajemen Waktu Efektif",
-    description: "Kelola waktu lebih baik untuk hasil kerja yang maksimal.",
-    image: "/ebook/3.jpg",
+    title: 'Produktif Tanpa Stress',
+    description: 'Rahasia menjaga produktivitas dan keseimbangan hidup.',
+    image: '/ebooks/3.jpg',
   },
   {
     id: 4,
-    title: "Cara Cepat Mengatur Keuangan Rumah Tangga",
-    description: "Teknik mudah mengatur pengeluaran dan pemasukan harian.",
-    image: "/ebook/4.jpg",
+    title: 'Marketing Instagram Pemula',
+    description: 'Strategi jitu jualan laris lewat Instagram.',
+    image: '/ebooks/4.jpg',
   },
   {
     id: 5,
-    title: "Menghasilkan Uang dari Hobi",
-    description: "Ubah hobi menjadi peluang bisnis yang menjanjikan.",
-    image: "/ebook/5.jpg",
+    title: 'Membaca Peluang Usaha',
+    description: 'Cara jitu melihat dan menangkap peluang di sekitar kita.',
+    image: '/ebooks/5.jpg',
   },
   {
     id: 6,
-    title: "Panduan Investasi Pemula",
-    description: "Langkah awal memahami investasi dengan risiko minim.",
-    image: "/ebook/6.jpg",
+    title: 'Motivasi Pagi Hari',
+    description: 'Bangun semangat setiap pagi dan raih hari terbaikmu.',
+    image: '/ebooks/6.jpg',
   },
   {
     id: 7,
-    title: "Membangun Personal Branding",
-    description: "Jadilah pribadi yang dikenal dan dipercaya orang.",
-    image: "/ebook/7.jpg",
+    title: 'Tips Karier Profesional',
+    description: 'Naik level dalam pekerjaan dengan tips praktis.',
+    image: '/ebooks/7.jpg',
   },
   {
     id: 8,
-    title: "Strategi Usaha Kuliner Rumahan",
-    description: "Mulai usaha makanan dari rumah dengan modal kecil.",
-    image: "/ebook/8.jpg",
+    title: 'Rahasia Jualan Laris',
+    description: 'Teknik closing dan promosi yang terbukti berhasil.',
+    image: '/ebooks/8.jpg',
   },
   {
     id: 9,
-    title: "Rahasia Pemasaran Digital",
-    description: "Teknik promosi online agar produk cepat dikenal.",
-    image: "/ebook/9.jpg",
+    title: 'Kunci Menjadi Disiplin',
+    description: 'Bangun disiplin kuat dan capai target hidup.',
+    image: '/ebooks/9.jpg',
   },
   {
     id: 10,
-    title: "Menjadi Freelancer Sukses",
-    description: "Cara mendapatkan klien dan penghasilan dari rumah.",
-    image: "/ebook/10.jpg",
+    title: 'Belajar Desain Canva',
+    description: 'Buat desain keren untuk konten dan bisnis.',
+    image: '/ebooks/10.jpg',
   },
-];
+]
 
 export default function EbookPage() {
   return (
-    <main className="bg-white text-black min-h-screen py-10 px-4">
-      <h1 className="text-3xl font-bold text-center mb-10 text-yellow-500">
-        Daftar E-Book UndiPro
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-        {ebooks.map((ebook) => (
-          <div key={ebook.id} className="border border-gray-300 rounded-2xl shadow-lg p-4 bg-white">
-            <Image
-              src={ebook.image}
-              alt={`Ebook ${ebook.id}`}
-              width={500}
-              height={300}
-              className="w-full h-auto rounded-xl mb-4"
-            />
-            <h2 className="text-xl font-bold text-yellow-600">{ebook.title}</h2>
-            <p className="text-gray-700 my-2">{ebook.description}</p>
-            <p className="font-semibold text-black">
-              Rp49.000 + 2 Kupon Undian
-            </p>
-            <button className="mt-3 bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded w-full">
-              Beli Sekarang
-            </button>
-          </div>
-        ))}
-      </div>
-    </main>
-  );
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+      {ebooks.map((ebook) => (
+        <Card key={ebook.id} className="shadow-xl rounded-2xl overflow-hidden">
+          <Image
+            src={ebook.image}
+            alt={ebook.title}
+            width={500}
+            height={300}
+            className="w-full h-64 object-cover"
+          />
+          <CardContent className="p-4 space-y-2">
+            <h2 className="text-xl font-bold text-gold">{ebook.title}</h2>
+            <p className="text-sm text-muted-foreground">{ebook.description}</p>
+            <p className="text-sm font-semibold text-foreground">Harga: Rp49.000</p>
+            <p className="text-xs text-muted-foreground">Bonus: 2 kupon undian</p>
+            <Button asChild>
+              <a
+                href={`https://undipro.com/payment/ebook-${ebook.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Beli Sekarang
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  )
 }
