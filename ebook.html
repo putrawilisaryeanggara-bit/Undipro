@@ -1,10 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Daftar E-Book | UndiPro</title>
-  <link rel="stylesheet" href="assets/style.css"/>
+  <title>E-Book UndiPro</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+    }
+    header {
+      background: black;
+      color: gold;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: gold;
+      text-decoration: none;
+    }
+    .ebook-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .ebook-card {
+      background-color: #1a1a1a;
+      border: 1px solid gold;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+    .ebook-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .price {
+      margin-top: 0.5rem;
+      color: gold;
+      font-weight: bold;
+    }
+    .ebook-card button {
+      background: gold;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .ebook-card button:hover {
+      background: #e6b800;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #000;
+      color: #888;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,22 +76,34 @@
     <nav>
       <a href="index.html">Beranda</a>
       <a href="ebook.html">E-Book</a>
-      <a href="goldgive.html">GOLD GIVE</a>
+      <a href="gold-give.html">GOLD GIVE</a>
       <a href="pengumuman.html">Pengumuman</a>
     </nav>
   </header>
-  <main>
-    <h2>Daftar E-Book</h2>
-    <div class="ebook-list">
-      <div class="ebook-card">
-        <h3>Rahasia Sukses Finansial</h3>
-        <p>Pelajari rahasia keuangan dan cara mengelola uang.</p>
-        <a href="pembayaran.html?ebook=1" class="btn">Beli Sekarang</a>
-      </div>
+
+  <section class="ebook-container">
+    <!-- Ulangi format ini untuk 10 e-book -->
+    <!-- EBOOK 1 -->
+    <div class="ebook-card">
+      <img src="assets/ebook1.jpg" alt="Ebook 1" />
+      <h3>Rahasia Sukses Finansial</h3>
+      <p>Strategi sederhana membangun masa depan keuangan yang lebih baik.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="pembayaran-1.html"><button>Beli Sekarang</button></a>
     </div>
-  </main>
-  <footer>
-    <p>© 2025 UndiPro</p>
-  </footer>
+
+    <!-- EBOOK 2 -->
+    <div class="ebook-card">
+      <img src="assets/ebook2.jpg" alt="Ebook 2" />
+      <h3>Bisnis Online dari Nol</h3>
+      <p>Panduan praktis memulai bisnis online meski tanpa modal besar.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="pembayaran-2.html"><button>Beli Sekarang</button></a>
+    </div>
+
+    <!-- Lanjut sampai EBOOK 10 (sama formatnya) -->
+  </section>
+
+  <footer>&copy; 2025 UndiPro</footer>
 </body>
 </html>
