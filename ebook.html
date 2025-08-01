@@ -1,109 +1,179 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>E-Book UndiPro</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UndiPro - E-Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background-color: #111;
       color: white;
-      font-family: sans-serif;
     }
     header {
-      background: black;
-      color: gold;
-      padding: 1rem;
+      background-color: #000;
+      padding: 20px;
       text-align: center;
     }
-    nav a {
-      margin: 0 15px;
-      color: gold;
-      text-decoration: none;
+    header h1 {
+      color: #FFD700;
     }
-    .ebook-container {
+    .container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
-      padding: 2rem;
+      padding: 30px;
     }
     .ebook-card {
-      background-color: #1a1a1a;
-      border: 1px solid gold;
-      border-radius: 12px;
-      padding: 1rem;
-      width: 280px;
+      background-color: #222;
+      border-radius: 10px;
+      margin: 15px;
+      padding: 20px;
+      width: 260px;
       text-align: center;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
     }
     .ebook-card img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
+      height: auto;
       border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .ebook-card h3 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+    .ebook-card p {
+      font-size: 0.95em;
+      margin-bottom: 12px;
     }
     .price {
-      margin-top: 0.5rem;
-      color: gold;
       font-weight: bold;
+      margin-bottom: 15px;
     }
     .ebook-card button {
-      background: gold;
+      background-color: #FFD700;
       border: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      margin-top: 10px;
+      padding: 10px 20px;
+      color: #111;
       font-weight: bold;
+      border-radius: 5px;
       cursor: pointer;
     }
     .ebook-card button:hover {
-      background: #e6b800;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #000;
-      color: #888;
-      margin-top: 2rem;
+      background-color: #e6c200;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>UndiPro</h1>
-    <nav>
-      <a href="index.html">Beranda</a>
-      <a href="ebook.html">E-Book</a>
-      <a href="gold-give.html">GOLD GIVE</a>
-      <a href="pengumuman.html">Pengumuman</a>
-    </nav>
+    <h1>Daftar E-Book UndiPro</h1>
   </header>
+  <div class="container">
 
-  <section class="ebook-container">
-    <!-- Ulangi format ini untuk 10 e-book -->
-    <!-- EBOOK 1 -->
     <div class="ebook-card">
-      <img src="assets/ebook1.jpg" alt="Ebook 1" />
+      <img src="images/ebook1.jpg" alt="Rahasia Sukses Finansial" />
       <h3>Rahasia Sukses Finansial</h3>
       <p>Strategi sederhana membangun masa depan keuangan yang lebih baik.</p>
       <div class="price">Rp49.000 + 2 Kupon Undian</div>
-      <a href="pembayaran-1.html"><button>Beli Sekarang</button></a>
+      <a href="https://undipro.com/pembayaran-1.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
     </div>
-
-    <!-- EBOOK 2 -->
+    
     <div class="ebook-card">
-      <img src="assets/ebook2.jpg" alt="Ebook 2" />
+      <img src="images/ebook2.jpg" alt="Bisnis Online dari Nol" />
       <h3>Bisnis Online dari Nol</h3>
       <p>Panduan praktis memulai bisnis online meski tanpa modal besar.</p>
       <div class="price">Rp49.000 + 2 Kupon Undian</div>
-      <a href="pembayaran-2.html"><button>Beli Sekarang</button></a>
+      <a href="https://undipro.com/pembayaran-2.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
     </div>
-
-    <!-- Lanjut sampai EBOOK 10 (sama formatnya) -->
-  </section>
-
-  <footer>&copy; 2025 UndiPro</footer>
+    
+    <div class="ebook-card">
+      <img src="images/ebook3.jpg" alt="Produktif Tanpa Stress" />
+      <h3>Produktif Tanpa Stress</h3>
+      <p>Tips mengatur waktu dan tenaga untuk hidup lebih seimbang.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-3.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook4.jpg" alt="Marketing Instagram Pemula" />
+      <h3>Marketing Instagram Pemula</h3>
+      <p>Cara cepat membangun bisnis lewat Instagram.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-4.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook5.jpg" alt="Membaca Peluang Usaha" />
+      <h3>Membaca Peluang Usaha</h3>
+      <p>Jangan lewatkan peluang di sekitarmu. Ini cara melihatnya!</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-5.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook6.jpg" alt="Motivasi Pagi Hari" />
+      <h3>Motivasi Pagi Hari</h3>
+      <p>Kumpulan inspirasi singkat yang membangkitkan semangatmu.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-6.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook7.jpg" alt="Tips Karier Profesional" />
+      <h3>Tips Karier Profesional</h3>
+      <p>Langkah-langkah cerdas meniti karier di era digital.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-7.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook8.jpg" alt="Rahasia Jualan Laris" />
+      <h3>Rahasia Jualan Laris</h3>
+      <p>Cara sederhana tapi ampuh agar produkmu cepat laku.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-8.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook9.jpg" alt="Kunci Menjadi Disiplin" />
+      <h3>Kunci Menjadi Disiplin</h3>
+      <p>Latihan disiplin harian untuk hidup yang lebih terarah.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-9.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+    <div class="ebook-card">
+      <img src="images/ebook10.jpg" alt="Belajar Desain Canva" />
+      <h3>Belajar Desain Canva</h3>
+      <p>Tutorial desain untuk pemula agar lebih kreatif dan percaya diri.</p>
+      <div class="price">Rp49.000 + 2 Kupon Undian</div>
+      <a href="https://undipro.com/pembayaran-10.html" target="_blank">
+        <button>Beli Sekarang</button>
+      </a>
+    </div>
+    
+  </div>
 </body>
 </html>
