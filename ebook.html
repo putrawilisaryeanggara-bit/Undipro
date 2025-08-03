@@ -1,2 +1,158 @@
-<!-- Halaman E-Book -->
-<a href='index.html'>Kembali ke Beranda</a>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daftar E-Book | UndiPro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #1c1c1c;
+      color: white;
+    }
+
+    header {
+      background-color: gold;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #000;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .ebook-card {
+      background-color: #2b2b2b;
+      border: 1px solid gold;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .ebook-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .ebook-card-content {
+      padding: 15px;
+    }
+
+    .ebook-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: gold;
+    }
+
+    .ebook-description {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .ebook-price {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #ccc;
+    }
+
+    .buy-button {
+      background-color: gold;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 0 0 10px 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #d4af37;
+    }
+
+    .back-button {
+      display: block;
+      margin: 30px auto 10px auto;
+      text-align: center;
+      background-color: transparent;
+      color: gold;
+      border: 2px solid gold;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      width: fit-content;
+    }
+
+    .back-button:hover {
+      background-color: gold;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #111;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Daftar E-Book UndiPro</h1>
+  </header>
+
+  <div class="container">
+    <div class="ebook-grid">
+      <div class="ebook-card">
+        <img src="img/ebook1.jpg" alt="Rahasia Sukses Finansial" />
+        <div class="ebook-card-content">
+          <div class="ebook-title">Rahasia Sukses Finansial</div>
+          <div class="ebook-description">Pelajari strategi keuangan untuk masa depan lebih cerah.</div>
+          <div class="ebook-price">Rp49.000 (Bonus 2 Kupon Undian)</div>
+        </div>
+        <a href="https://tripay.co.id/checkout/example-link-1" class="buy-button">Beli Sekarang</a>
+      </div>
+
+      <div class="ebook-card">
+        <img src="img/ebook2.jpg" alt="Bisnis Online dari Nol" />
+        <div class="ebook-card-content">
+          <div class="ebook-title">Bisnis Online dari Nol</div>
+          <div class="ebook-description">Panduan memulai bisnis online tanpa pengalaman.</div>
+          <div class="ebook-price">Rp49.000 (Bonus 2 Kupon Undian)</div>
+        </div>
+        <a href="https://tripay.co.id/checkout/example-link-2" class="buy-button">Beli Sekarang</a>
+      </div>
+
+      <!-- Tambahkan 8 e-book lainnya di sini sesuai urutan -->
+
+    </div>
+
+    <a href="index.html" class="back-button">⬅ Kembali ke Beranda</a>
+  </div>
+
+  <footer>
+    © 2025 UndiPro. All rights reserved.
+  </footer>
+
+</body>
+</html>
