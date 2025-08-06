@@ -24,10 +24,10 @@ body { font-family: Arial; background-color: #000; color: gold; }
 }
 
 .sosmed-icons img:hover {
-  transform: scale(1.2);
+  transform: scale(1.9);
 }
 .social-icons {
-  position: fixed;
+  position: center;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
