@@ -22,3 +22,25 @@ body { font-family: Arial; background-color: #000; color: gold; }
   background-color: gold;
   color: black;
 }
+.contact-section {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #222;
+  color: white;
+  margin-top: 40px;
+  border-top: 2px solid gold;
+}
+
+.contact-section h3 {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+.contact-section a {
+  color: gold;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
